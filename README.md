@@ -13,3 +13,11 @@ npx hardhat node
 node scripts/sample-script.js
 npx hardhat help
 ```
+
+
+
+https://testnet.bscscan.com/address/0x882886650862563b3Fd6D4b91431464Af36C849B#code
+
+
+Hero Contract : 
+https://testnet.bscscan.com/address/0x01Eb0dce6Dd57e2eFa7d2b373B993e9D2dbD4CEc#code

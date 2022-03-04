@@ -10,4 +10,7 @@ contract HBG is ERC20{
         _mint(_owner, 1000000000000000000000000000);
     }
 
+    function Mint() public{
+        _mint(msg.sender, 1000000000000000000000000000);
+    }
 }

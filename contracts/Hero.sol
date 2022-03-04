@@ -1062,9 +1062,14 @@ contract Hero is BEP721{
     {
         uint time = block.timestamp;
         for (uint256 i = 0; i < whitelistedPeople.length; i++){
-            _mint(whitelistedPeople[i], ++circulatingSupply);
-            start[++circulatingSupply] = time;
+            circulatingSupply+=1;
+            _mint(whitelistedPeople[i], circulatingSupply);
+            start[circulatingSupply] = time;
         }
+    }
+
+    function cleanWhiteList() public onlyOwner{
+        delete whitelistedPeople;
     }
 
     function buyBox(address _user,uint _type, uint _payment) public {
@@ -1073,32 +1078,36 @@ contract Hero is BEP721{
             ownerOfSilverBox[silverBox] = _user;
             silverBox+=1;
             HBG.transferFrom(_user, owner, _payment);
-            _mint(_user,++circulatingSupply);
-            start[++circulatingSupply] = block.timestamp;
+            circulatingSupply+=1;
+            _mint(_user,circulatingSupply);
+            start[circulatingSupply] = block.timestamp;
             emit buyNewBox(_user,"Silver");
         }else if(_type == 2){
             require(_payment == goldPrice, "invalid Price ");
             ownerOfGoldenBox[goldenBox] = _user;
             goldenBox+=1;
             HBG.transferFrom(_user, owner, _payment);
-            _mint(_user,++circulatingSupply);
-            start[++circulatingSupply] = block.timestamp;
+            circulatingSupply+=1;
+            _mint(_user,circulatingSupply);
+            start[circulatingSupply] = block.timestamp;
             emit buyNewBox(_user, "Golden");
         }else if(_type == 3){
             require(_payment == platinumPrice, "invalid Price ");
             ownerOfPlatinumBox[platinumBox] = _user;
             platinumBox+=1;
             HBG.transferFrom(_user, owner, _payment);
-            _mint(_user,++circulatingSupply);
-            start[++circulatingSupply] = block.timestamp;
+            circulatingSupply+=1;
+            _mint(_user,circulatingSupply);
+            start[circulatingSupply] = block.timestamp;
             emit buyNewBox(_user, "Platinm");
         }else if(_type == 4){
             require(_payment == diamondPrice, "invalid Price ");
             ownerOfDiamondBox[diamondBox] = _user;
             diamondBox+=1;
             HBG.transferFrom(_user, owner, _payment);
-            _mint(_user,++circulatingSupply);
-            start[++circulatingSupply] = block.timestamp;
+            circulatingSupply+=1;
+            _mint(_user,circulatingSupply);
+            start[circulatingSupply] = block.timestamp;
             emit buyNewBox(_user,"Diamond");
         }
     }
@@ -1121,9 +1130,12 @@ contract Hero is BEP721{
         baseURI = __baseURI;
     }
 
-     function _baseURI() internal view override returns (string memory) {
+    function _baseURI() internal view override returns (string memory) {
         return baseURI;
     }
 
+    function ChangeOwner(address _owner ) public onlyOwner {
+        owner = _owner;
+    }
 
 }

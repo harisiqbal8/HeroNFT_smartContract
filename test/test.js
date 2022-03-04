@@ -40,6 +40,9 @@ describe("Hero", function () {
   it("Mint Token for Whitelisted : ", async () => {
     await hero.endClaimHero();
     expect(await hero.balanceOf(a1.address)).to.eq(1);
+    const ownerIs = await hero.ownerOf(3);
+    console.log(a3.address);
+    console.log(ownerIs);
   });
   it("owner of token Id : ", async () =>{
     expect(await hero.ownerOf(1)).to.eq(a1.address);
@@ -72,5 +75,25 @@ describe("Hero", function () {
     const check = await hero.tokenURI(1);
     console.log(check);
   });
+  it("clean array list : ", async ()=>{
+    await hero.cleanWhiteList();
+    const [b1,b2,b3,b4,b5,b6,b7] = await hero.checker();
+    console.log(b1);
+  });
+  it("test Array again : ", async ()=>{
+    let arr = [a1.address,
+      a2.address,a3.address,
+      a4.address,a5.address,
+      a6.address,a7.address,
+      a8.address,a9.address,
+      a10.address,a11.address,
+      a12.address,a13.address,
+      a14.address,a15.address,
+      a16.address,a17.address,
+      a18.address];
+    await hero.connect(owner).addAddressToWhiteList(arr);
   
+    const [b1,b2,b3,b4,b5,b6,b7] = await hero.checker();
+    console.log(b1);
+  })
 });

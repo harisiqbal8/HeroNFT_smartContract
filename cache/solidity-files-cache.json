@@ -2,15 +2,15 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/zubair/Documents/office/smart_contract/hero_contract/HeroNFT_smartContract/contracts/HBG.sol": {
-      "lastModificationDate": 1646320800569,
-      "contentHash": "b348f502b6ae711618bf09c2bd398176",
+      "lastModificationDate": 1646380777182,
+      "contentHash": "e8f0d86e35c8e96b1d428a044be7d5a1",
       "sourceName": "contracts/HBG.sol",
       "solcConfig": {
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": false,
-            "runs": 200
+            "enabled": true,
+            "runs": 1
           },
           "outputSelection": {
             "*": {
@@ -46,8 +46,8 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": false,
-            "runs": 200
+            "enabled": true,
+            "runs": 1
           },
           "outputSelection": {
             "*": {
@@ -85,8 +85,8 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": false,
-            "runs": 200
+            "enabled": true,
+            "runs": 1
           },
           "outputSelection": {
             "*": {
@@ -120,8 +120,8 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": false,
-            "runs": 200
+            "enabled": true,
+            "runs": 1
           },
           "outputSelection": {
             "*": {
@@ -157,8 +157,8 @@
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": false,
-            "runs": 200
+            "enabled": true,
+            "runs": 1
           },
           "outputSelection": {
             "*": {
@@ -185,15 +185,15 @@
       ]
     },
     "/Users/zubair/Documents/office/smart_contract/hero_contract/HeroNFT_smartContract/contracts/Hero.sol": {
-      "lastModificationDate": 1646325245551,
-      "contentHash": "3da1fd5e53ec9ff409cfb9ed2a8281a2",
+      "lastModificationDate": 1646383107116,
+      "contentHash": "626bcc7e2a1b82e1f50f6cde57eaf9ec",
       "sourceName": "contracts/Hero.sol",
       "solcConfig": {
         "version": "0.8.4",
         "settings": {
           "optimizer": {
-            "enabled": false,
-            "runs": 200
+            "enabled": true,
+            "runs": 1
           },
           "outputSelection": {
             "*": {
